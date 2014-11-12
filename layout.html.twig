@@ -1,20 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<header class="bg-midnight-blue">
+<nav class="navbar navbar-inverse navbar-static-top navbar-lg" role="navigation">
   <div class="container">
-    <nav class="navbar">
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="{{ path('yo_render_offer', { 'slug': 'prolubov.com' }) }}">Вебинар</a></li>
-          <li><a href="{{ path('front_page_show', { 'slug': 'show' }) }}">Шоу</a>
-            </li>
-          <li class="active"><a href="{{ path('front_blog', { 'host': 'prolubov.com' }) }}">Блог</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </nav><!-- /navbar -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-03">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="{{ 'img/icons/svg/icecream.svg' | asset_url }}" style="height:32px; width: auto;"> Yaica.xyz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-03">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ path('yo_render_offer', { 'slug': 'yaica.xyz' }) }}">Вебинар</a></li>
+        <li><a href="{{ path('yo_render_offer', { 'slug': 'lsbd' }) }}">Книга</a></li>
+        <li><a href="{{ path('front_blog', { 'host': 'yaica.xyz' }) }}">Блог</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
   </div>
-</header>
+</nav><!-- /navbar -->
+
 {% block content %}
 {% endblock %}
 
@@ -25,11 +29,11 @@
         <div class="col-sm-2 col-sm-offset-6">
           <h6>Категории</h6>
           <ul>
-            <li><a href="{{ path('front_offer_show', { 'slug': 'prolubov.com' }) }}">Вебинар</a>
+            <li><a href="{{ path('front_offer_show', { 'slug': 'yaica.xyz' }) }}">Вебинар</a>
             </li>
             <li><a href="{{ path('front_page_show', { 'slug': 'show' }) }}">Шоу</a>
             </li>
-            <li><a href="{{ path('front_blog', { 'host': 'prolubov.com' }) }}">Блог</a>
+            <li><a href="{{ path('front_blog', { 'host': 'yaica.xyz' }) }}">Блог</a>
             </li>
           </ul>
         </div>
@@ -47,7 +51,7 @@
         </div>
       </nav>
       <div class="col-sm-2 buy-btn">
-        <a class="btn btn-danger btn-block" href="{{ path('front_offer_show', { 'slug': 'prolubov.com' }) }}">Запишись</a>
+        <a class="btn btn-danger btn-block" href="{{ path('front_offer_show', { 'slug': 'yaica.xyz' }) }}">Запишись</a>
         на ближайший вебинар
       </div>
     </div>
