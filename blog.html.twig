@@ -1,0 +1,18 @@
+{% extends 'post.html.twig' %}
+
+{% block content %}
+{% for post in posts %}
+  <section class="post">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>{{ post.title }}</h1>
+          <div class="post-body">
+            {{ post.text | markdown }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+{% endblock %}
